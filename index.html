@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARNAV AI MOD</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            background: url('pranav.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .linear {
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 20px red;
+        }
+
+        .title {
+            font-size: 24px;
+            text-shadow: 0 0 10px red;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            text-shadow: 0 0 10px blue;
+            background: linear-gradient(45deg, #0066ff, #00ccff);
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #0055cc, #0099cc);
+            box-shadow: 0 0 15px #00ccff;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid red;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        select {
+            appearance: none;
+            text-align: center;
+        }
+
+        .horizontal-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .horizontal-buttons .button {
+            width: 48%;
+        }
+
+        .spinner-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        #versionText {
+            margin-top: 15px;
+            font-size: 18px;
+            text-shadow: 0 0 10px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <div class="title">PARNAV AI MOD</div>
+
+        <!-- Version Section -->
+        <div class="linear">
+            <h3>VERSION</h3>
+            <p id="versionText">--</p>
+            <button class="button" id="searchVersion">Search Version</button>
+        </div>
+
+        <!-- Game Section -->
+        <div class="linear">
+            <h3>GAME NAME</h3>
+            <select id="gameList">
+                <option value="">Select a Game</option>
+                <option value="91 CLUB">91 CLUB</option>
+                <option value="BDG GAME">BDG GAME</option>
+                <option value="OK WIN">OK WIN</option>
+                <option value="DIUWIN">DIUWIN</option>
+                <option value="GOA GAME">GOA GAME</option>
+                <option value="TIRANGA">TIRANGA</option>
+                <option value="DAMAN">DAMAN</option>
+                <option value="82 LOTTERY">82 LOTTERY</option>
+                <option value="51 GAME">51 GAME</option>
+                <option value="55 CLUB">55 CLUB</option>
+            </select>
+            <p class="spinner-text">Selected Game: <span id="selectedGame" style="color: red;">None</span></p>
+        </div>
+
+        <!-- Licensed Key Section -->
+        <div class="linear">
+            <h3>LICENSED KEY</h3>
+            <input type="text" id="licenseKey" placeholder="Enter Licensed Key">
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="horizontal-buttons">
+            <button class="button" id="getKey">GET KEY</button>
+            <button class="button" id="login">LOGIN</button>
+        </div>
+    </div>
+
+    <script>
+        // Version Search
+        document.getElementById('searchVersion').addEventListener('click', () => {
+            document.getElementById('versionText').innerText = 'V4';
+        });
+
+        // Game Selection
+        document.getElementById('gameList').addEventListener('change', (e) => {
+            const selectedGame = e.target.value || 'None';
+            document.getElementById('selectedGame').innerText = selectedGame;
+        });
+
+        // Get Key Button
+        document.getElementById('getKey').addEventListener('click', () => {
+            window.open('https://t.me/+zpQX-tyG6U4yOTk1', '_blank');
+        });
+
+        // Login Button
+        document.getElementById('login').addEventListener('click', () => {
+            const key = document.getElementById('licenseKey').value.trim();
+            if (key === 'PARNAV') {
+                window.location.href = 'playing.html';
+            } else {
+                alert('You are not in the database!');
+            }
+        });
+    </script>
+</body>
+</html>
